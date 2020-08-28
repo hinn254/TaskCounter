@@ -1,38 +1,128 @@
-.App {
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #323232;
+  color: #323232;
+  font-family: "Alata", sans-serif;
+}
+
+.box {
+  padding: 2px;
+  height: 75vh;
+  width: 60%;
   text-align: center;
+  background: #f2f2f2;
+  border: 1px solid #fff;
+  box-shadow: 1px 1px 2px #fff inset, -1px -1px 2px #fff inset;
+  border-radius: 3px/6px;
+  flex-wrap: wrap;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.box:hover,
+.box:focus {
+  box-shadow: 1px 1px 2px #fff inset, -1px -1px 2px #fff inset;
+  cursor: pointer;
+  border: 1px solid gray;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.outer-box {
+  padding-top: 5rem;
+  max-width: 80%;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* background: yellow; */
+}
+.result {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.title {
+  flex: 2;
+}
+.title-out {
+  flex: 2;
 }
 
-.App-link {
-  color: #61dafb;
+.title-show {
+  flex: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+hr {
+  line-height: 2px;
+  color: black;
+  width: 60%;
+  margin: 2px auto;
+  align-self: center;
+}
+.calculate {
+  display: flex;
+  flex-direction: column;
+  max-width: 60%;
+  margin: 0 auto;
+  height: 18vh;
+  align-items: center;
+  background: #1d2024;
+  color: #fff;
+  border-radius: 1.3rem;
+  transition: all 0.7s ease-in;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.calculate:hover,
+.calculate:focus {
+  background: #fff;
+  color: #1d2024;
+}
+
+.calculate span {
+  height: 200px;
+}
+
+.val {
+  margin: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.val > h3,
+span,
+input {
+  flex: 2;
+}
+.val > button {
+  flex: 1;
+}
+
+.foot {
+  /* background: #fff; */
+  color: #1d2024;
+  width: 40%;
+  margin: 2rem auto;
+  text-align: center;
+}
+.foot a {
+  font-size: larger;
+  text-decoration: none;
+  color: #8959b6;
+}
+.foot a:hover,
+.foot a:focus {
+  color: orangered;
+  text-decoration: underline;
+}
+
+input {
+  height: 2rem;
+  width: 20px;
+  margin-right: 1.3rem;
+}
+
+.clear {
+  height: 0.8;
 }
